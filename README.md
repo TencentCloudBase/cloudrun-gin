@@ -51,10 +51,6 @@ func main() {
 
 执行 `go run main.go` 启动服务，访问`http://localhost:8080/json`可查看访问结果
 
-### 源码
-
-[cloudrun-gin](https://github.com/TencentCloudBase/tcbr-templates/tree/main/cloudrun-gin)
-
 ### 部署到云托管
 
 1、在cloudrun-gin目录下创建一个名称为Dockerfile的新文件,内容如下:
