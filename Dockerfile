@@ -1,5 +1,5 @@
 # 构建阶段
-FROM golang:1.22.3-alpine as builder
+FROM golang:1.23.10-alpine as builder
 
 # 安装依赖包，选用国内镜像源以提高下载速度
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tencent.com/g' /etc/apk/repositories \
