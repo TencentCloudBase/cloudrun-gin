@@ -99,21 +99,7 @@ cloudrun-gin/
 8. 函数代码选择 `cloudrun-gin` 目录进行上传
 9. 点击「完成」等待部署
 
-### 方式二：CloudBase CLI 部署
-
-```bash
-# 安装 CloudBase CLI
-npm install -g @cloudbase/cli
-
-# 登录
-tcb login
-
-# 初始化配置
-tcb init
-
-# 部署云函数
-tcb functions:deploy cloudrun-gin --dir ./
-```
+### 方式二：CloudBase CLI 部署(敬请期待)
 
 ### 方式三：本地打包上传
 
@@ -126,17 +112,13 @@ zip -r cloudrun-gin.zip main scf_bootstrap controllers/ models/ go.mod go.sum
 
 ## 访问应用
 
-部署成功后，您将获得一个访问链接：
+部署成功后，您可以参考[通过 HTTP 访问云函数](https://docs.cloudbase.net/service/access-cloud-function)设置自定义域名访问 HTTP 云函数。
 
-```
-https://service-xxx-xxx.gz.apigw.tencentcs.com/release/cloudrun-gin
-```
+访问地址格式：`https://your-function-url/`
 
 ### 测试接口
 
 ```bash
-# 替换为您的实际域名
-export API_URL="https://service-xxx-xxx.gz.apigw.tencentcs.com/release/cloudrun-gin"
 
 # 测试基础接口
 curl $API_URL/
